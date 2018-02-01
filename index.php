@@ -1,3 +1,22 @@
+<?php
+   ini_set("display_errors", 1);
+   require_once "models/MAContestant.php";
+   $post = (object) filter_input_array(INPUT_POST);
+
+   if( $post->request == "save-pageant-details" ) {
+      $contestant = new MAContestant((array) $post);
+      $contestant->save();
+
+      //Upload the pictures..
+      $contestant->uploadPhotos($_FILES);
+      // MAContestant::createTable((array) $post); exit();
+      // die(json_encode($_FILES));
+      print "<pre>";
+      print_r($post);
+      print "</pre>";
+      exit();
+   }
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -10,7 +29,7 @@ and open the template in the editor.
       <title></title>
       <!-- Font Awesome -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+      
       <!-- Bootstrap CDN -->
       <!-- Latest compiled and minified CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

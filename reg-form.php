@@ -9,7 +9,9 @@ $referer_link = filter_input(INPUT_GET, "ref");
 ?>
 
 <div id="root">
-   <form enctype="multipart/form-data" method="post" class="form reg-form" v-show="ready" @submit.prevent="navigate('forward')">
+   <form enctype="multipart/form-data" method="post" id="awlo-pageant-form" class="form reg-form" v-show="ready" @submit.prevent="navigate('forward')">
+      <input type="hidden" name="request" value="save-pageant-details" />
+      <input type="hidden" name="payment_id" :value="payment_id" />
       <div class="j-row">
          <input type="hidden" name="referer_link" value="<?php echo $referer_link; ?>" />
          <input type="hidden" name="valid_age" v-model="form.valid_age" />
@@ -36,7 +38,7 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>Email <span>*</span></label>
                <div class="input">
-                  <input type="email" v-model="form.email" class="form-control" name="pemail" placeholder="Enter Email Address" id="pf-email" value="popsyjunior@gmail.com" required />
+                  <input type="email" v-model="form.email" class="form-control" name="personal_mail" placeholder="Enter Email Address" id="pf-email" value="popsyjunior@gmail.com" required />
                </div>
             </div>
             <div class="col-md-6 form-group">
@@ -122,7 +124,7 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>Email Address of Guarantor/Guardian <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="email_of_guarantor" placeholder="Enter Email Address of Guarantor/Guardian" required="required">
+                  <input type="email" class="form-control" name="email_of_guarantor" placeholder="Enter Email Address of Guarantor/Guardian" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
@@ -235,7 +237,7 @@ $referer_link = filter_input(INPUT_GET, "ref");
                      <label>{{img.title}} (Max. File Size is 2MB</label>
                      <div class="input  append-small-btn">
                         <div class="file-button">
-                           <input type="file" name="File Name (Max. File Size is 2MB)" required @change="readURL($event,i+1)" />
+                           <input type="file" :name="'upload_' + (i+1)" required @change="readURL($event,i+1)" placeholder="File Name (Max. File Size is 2MB)" />
                         </div>
                      </div>
                   </div>
@@ -278,8 +280,13 @@ $referer_link = filter_input(INPUT_GET, "ref");
 
 <script>
 var payment = {
-   "accesscode": "<?php echo md5(md5(microtime) . md5(date())); ?>"
-}
+   "accesscode": "<?php echo md5(md5(microtime) . md5(date())); ?>",
+   "amount": 6000 * 100
+};
+
+// payment.amount = 5000;
+
+var form_target = "index.php";
 </script>
 
 <!-- Script for form -->
