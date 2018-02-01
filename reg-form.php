@@ -54,7 +54,7 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>Alternate Phone Number</label>
                <div class="input">
-                  <input type="text" class="form-control" name="Alternate Phone Number" placeholder="Enter Alternate Phone Number">
+                  <input type="text" class="form-control" name="alternate_phone_numer" placeholder="Enter Alternate Phone Number">
                </div>
             </div>
 
@@ -67,7 +67,7 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>Country of Residence <span>*</span></label>
                <div class="input">
-                  <select class="form-control" name="Country of Residence" required="required" data-dpmaxz-eid="13">
+                  <select class="form-control" name="country_of_residence" required="required" data-dpmaxz-eid="13">
                      <option v-for="country in countries">{{country}}</option>
                   </select>
                   <i></i>
