@@ -42,26 +42,26 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>Date of Birth <span>*</span></label>
                <div class="input">
-                  <input type="date" v-model="form.date_of_birth" @change="validateDate" class="form-control date-picker hasDatepicker" name="Date of Birth" placeholder="Enter Date of Birth" required="required">
+                  <input type="date" v-model="form.date_of_birth" @change="validateDate" class="form-control date-picker hasDatepicker" name="Date_of_Birth" placeholder="Enter Date of Birth" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Phone Number <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Phone Number" placeholder="Enter Phone Number" required="required">
+                  <input type="text" class="form-control" name="phone_number" placeholder="Enter Phone Number" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Alternate Phone Number</label>
                <div class="input">
-                  <input type="text" class="form-control" name="alternate_phone_numer" placeholder="Enter Alternate Phone Number">
+                  <input type="text" class="form-control" name="alt_phone_numer" placeholder="Enter Alternate Phone Number">
                </div>
             </div>
 
             <div class="col-md-6 form-group">
                <label>Nationality <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Nationality" placeholder="Enter Nationality" required="required">
+                  <input type="text" class="form-control" name="nationality" placeholder="Enter Nationality" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
@@ -76,7 +76,7 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>State <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="State" placeholder="Enter State" required="required">
+                  <input type="text" class="form-control" name="state" placeholder="Enter State" required="required">
                </div>
             </div>
          </div>
@@ -85,62 +85,62 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>Contact Address <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Contact Address" placeholder="Enter Contact Address" required="required">
+                  <input type="text" class="form-control" name="contact_address" placeholder="Enter Contact Address" required="required">
                </div>
             </div>
 
             <div class="col-md-6 form-group">
                <label>Highest Educational Qualification <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Highest Educational Qualification" placeholder="Enter Highest Educational Qualification" required="required">
+                  <input type="text" class="form-control" name="highest_educational_qualification" placeholder="Enter Highest Educational Qualification" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Higher Institution (Past or Present) <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Higher Institution (Past or Present)" placeholder="Enter Higher Institution (Past or Present)" required="required">
+                  <input type="text" class="form-control" name="higher_institution_attended" placeholder="Enter Higher Institution (Past or Present)" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Name of Guarantor/Guardian <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Name of Guarantor/Guardian" placeholder="Enter Name of Guarantor/Guardian" required="required">
+                  <input type="text" class="form-control" name="name_of_guarantor" placeholder="Enter Name of Guarantor/Guardian" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Phone Number of Guarantor/Guardian <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Phone Number of Guarantor/Guardian" placeholder="Enter Phone Number of Guarantor/Guardian" required="required">
+                  <input type="text" class="form-control" name="phone_of_guarantor" placeholder="Enter Phone Number of Guarantor/Guardian" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Alternate Phone Number of Guarantor/Guardian</label>
                <div class="input">
-                  <input type="text" class="form-control" name="Alternate Phone Number of Guarantor/Guardian" placeholder="Enter Alternate Phone Number of Guarantor/Guardian">
+                  <input type="text" class="form-control" name="alt_phone_of_guarantor" placeholder="Enter Alternate Phone Number of Guarantor/Guardian">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Email Address of Guarantor/Guardian <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Email Address of Guarantor/Guardian" placeholder="Enter Email Address of Guarantor/Guardian" required="required">
+                  <input type="text" class="form-control" name="email_of_guarantor" placeholder="Enter Email Address of Guarantor/Guardian" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Contact Address of Guarantor/Guardian <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="Contact Address of Guarantor/Guardian" placeholder="Enter Contact Address of Guarantor/Guardian" required="required">
+                  <input type="text" class="form-control" name="contact_of_guarantor" placeholder="Enter Contact Address of Guarantor/Guardian" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>State <span>*</span></label>
                <div class="input">
-                  <input type="text" class="form-control" name="State" placeholder="Enter State" required="required">
+                  <input type="text" class="form-control" name="state" placeholder="Enter State" required="required">
                </div>
             </div>
             <div class="col-md-6 form-group">
                <label>Country of Residence <span>*</span></label>
                <div class="input">
-                  <select class="form-control" name="Country of Residence" required="required" data-dpmaxz-eid="24">
+                  <select class="form-control" name="country_of_residence" required="required" data-dpmaxz-eid="24">
                      <option v-for="country in countries" :value="country">{{country}}</option>
                   </select>
                   <i></i>
@@ -176,14 +176,14 @@ $referer_link = filter_input(INPUT_GET, "ref");
             <div class="col-md-6 form-group">
                <label>What are some of your personal values? (50 word) <span>*</span></label>
                <div class="input">
-                  <textarea type="text" class="form-control" name="What are some of your personal values? (50 word)" rows="3" placeholder="Enter What are some of your personal values? (50 word)" required="required"></textarea>
+                  <textarea type="text" class="form-control" name="personal_values" rows="3" placeholder="Enter What are some of your personal values? (50 word)" required="required"></textarea>
                </div>
             </div>
 
              <div class="col-md-6 form-group">
                <label>Mention one person who has made great impact in your life? In what way? (100 word-limit) <span>*</span></label>
                <div class="input">
-                  <textarea type="text" class="form-control" name="Mention one person who has made great impact in your life? In what way? (100 word-limit)" rows="3" placeholder="Enter Mention one person who has made great impact in your life? In what way? (100 word-limit)" required="required"></textarea>
+                  <textarea type="text" class="form-control" name="impact_in_your_life" rows="3" placeholder="Enter Mention one person who has made great impact in your life? In what way? (100 word-limit)" required="required"></textarea>
                </div>
             </div>
          </div>
@@ -193,27 +193,27 @@ $referer_link = filter_input(INPUT_GET, "ref");
                <div class="form-group">
                   <label>What Leadership role have you played before? and how your community, school, or workplace has benefited from it.(150 word) <span>*</span></label>
                   <div class="input">
-                     <textarea type="text" class="form-control" name="What Leadership role have you played before? and how your community, school, or workplace has benefited from it.(150 word)" rows="3" placeholder="Enter What Leadership role have you played before? and how your community, school, or workplace has benefited from it.(150 word)" required="required"></textarea>
+                     <textarea type="text" class="form-control" name="leadership_you_played" rows="3" placeholder="Enter What Leadership role have you played before? and how your community, school, or workplace has benefited from it.(150 word)" required="required"></textarea>
                   </div>
                </div>
                <div class="form-group">
                   <label>What inspires you most about Africa (100 word) <span>*</span></label>
                   <div class="input">
-                     <textarea type="text" class="form-control" name="What inspires you most about Africa (100 word)" rows="3" placeholder="Enter What inspires you most about Africa (100 word)" required="required"></textarea>
+                     <textarea type="text" class="form-control" name="inspiration_about_africa" rows="3" placeholder="Enter What inspires you most about Africa (100 word)" required="required"></textarea>
                   </div>
                </div>
                <div class="form-group">
                   <label>If all young women in the world looked up to you. In what way would you influence them? (200 word) <span>*</span></label>
                   <div class="input">
-                     <textarea type="text" class="form-control" name="If all young women in the world looked up to you. In what way would you influence them? (200 word)" rows="3" placeholder="Enter If all young women in the world looked up to you. In what way would you influence them? (200 word)" required="required"></textarea>
+                     <textarea type="text" class="form-control" name=" you_influence_them" rows="3" placeholder="Enter If all young women in the world looked up to you. In what way would you influence them? (200 word)" required="required"></textarea>
                   </div>
                </div>
 
                <div class="form-group">
                   <label>Preferred State for Audition (Nigerian residents only) <span>*</span></label>
                   <div class="input">
-                     <select class="form-control" name="Preferred State for Audition (Nigerian residents only)" required="required" data-dpmaxz-eid="25">
-                        <option value="Lagos State">Lagos State</option>
+                     <select class="form-control" name="preferred_state_audition" required="required" data-dpmaxz-eid="25">
+                        <option value="Lagos-State">Lagos State</option>
                         <option value="Abuja">Abuja</option>
                         <option value="Imo State">Imo State</option>
                      </select>
